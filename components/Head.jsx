@@ -7,7 +7,9 @@ import { Button } from './ui/button';
 
 const Head = () => {
     return (
-        <section className='bg-head bg-no-repeat relative xl:bg-cover xl:h-[1098px] py-40 pb-32 xl:py-0'>
+        <section
+            className='bg-head bg-no-repeat relative xl:bg-cover xl:h-[1098px] py-40 pb-32 xl:py-0'
+            id='head'>
             <div className='container mx-auto' id='home'>
                 <div className='flex items-center xl:h-[960px]'>
                     <div className='w-full xl:max-w-[460px] text-center xl:text-left'>
