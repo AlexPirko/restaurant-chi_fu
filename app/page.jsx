@@ -1,3 +1,4 @@
+import About from '@/components/About';
 import Head from '@/components/Head';
 import Header from '@/components/Header';
 import Menu from '@/components/Menu';
@@ -11,6 +12,7 @@ export default function Home() {
             <Head />
             <Menu />
             <Reservation />
+            <About />
             {/* <StyleGuide /> */}
             <div className='h-[4000px]'></div>
         </main>
