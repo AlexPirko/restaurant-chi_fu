@@ -41,7 +41,7 @@ module.exports = {
                 footer: 'url(/footer/bg.png)',
             },
             boxShadow: {
-                primary: '40px 4px 40px 0px rgba(68, 68, 68, 0.25)',
+                primary: '30px 4px 30px 0px rgba(68, 68, 68, 0.15)',
             },
             keyframes: {
                 'accordion-down': {

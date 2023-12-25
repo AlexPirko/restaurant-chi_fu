@@ -87,7 +87,7 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
                             );
                         })}
                     </div>
-                    <ScrollLink to='reservation' smmoth offset={-150}>
+                    <ScrollLink to='reservation' smooth offset={-150}>
                         <Button variant='secondary'>Book a table</Button>
                     </ScrollLink>
                 </div>
