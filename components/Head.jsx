@@ -4,13 +4,16 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/variants';
 import { Button } from './ui/button';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Head = () => {
     return (
         <section
             className='bg-head bg-no-repeat relative xl:bg-cover xl:h-[1098px] py-40 pb-32 xl:py-0'
             id='head'>
-            <div className='container mx-auto' id='home'>
+            <div
+                className='container mx-auto'
+                id='home'>
                 <div className='flex items-center xl:h-[960px]'>
                     <div className='w-full xl:max-w-[460px] text-center xl:text-left'>
                         <motion.h1
@@ -19,7 +22,7 @@ const Head = () => {
                             whileInView={'show'}
                             viewport={{ once: false, amount: 0.4 }}
                             className='text-white mb-7'>
-                            Text text text <br /> text
+                            Chi Fu Asian Restaurant
                         </motion.h1>
                         <motion.p
                             variants={fadeIn('down', 0.4)}
@@ -36,18 +39,26 @@ const Head = () => {
                             whileInView={'show'}
                             viewport={{ once: false, amount: 0.4 }}
                             className='text-white mb-12 max-w-lg mx-auto xl:max-w-none xl:mx-0'>
-                            Sed ut perspiciatis unde omnis iste natus error sit
-                            voluptatem accusantium doloremque laudantium, totam
-                            rem aperiam, eaque ipsa quae ab illo inventore
-                            veritatis et quasi architecto beatae vitae dicta
-                            sunt explicabo. Nemo enim ipsam voluptatem quia
+                            Our menu features an array of Asian delicacies,
+                            emphasizing the use of fresh ingredients and vibrant
+                            flavors. Explore our diverse selection of sushi,
+                            sashimi, and classic Asian dishes.
+                            <p className='text-white'>
+                                Experience the freshest catch of the day,
+                                carefully chosen from the market&apos;s finest
+                                selection of fish
+                            </p>
                         </motion.p>
                         <motion.div
                             variants={fadeIn('down', 0.8)}
                             initial='hidden'
                             whileInView={'show'}
                             viewport={{ once: false, amount: 0.4 }}>
-                            <Button>Lets eat</Button>
+                            <ScrollLink
+                                to='reservation'
+                                smooth={true}>
+                                <Button>Let&apos;s eat</Button>
+                            </ScrollLink>
                         </motion.div>
                     </div>
                     <motion.div

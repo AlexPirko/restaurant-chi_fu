@@ -13,7 +13,7 @@ module.exports = {
             center: true,
             padding: '15px',
             screens: {
-                sm: '640px',
+                sm: '540px',
                 md: '768px',
                 lg: '969px',
                 xl: '1200px',
@@ -37,7 +37,7 @@ module.exports = {
             backgroundImage: {
                 head: 'url(/head/bg.png)',
                 menu: 'url(/menu/bg.png)',
-                reservation: 'url(/reservation/bg.png)',
+                reservation: 'url(/reservation/bg.jpg)',
                 footer: 'url(/footer/bg.png)',
             },
             boxShadow: {

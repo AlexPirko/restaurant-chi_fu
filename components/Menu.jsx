@@ -9,24 +9,24 @@ import { fadeIn } from '@/variants';
 
 const menu = [
     {
-        img: '/menu/chicken.jpg',
-        title: 'Chicken fry',
-        price: '$18.00',
+        img: '/menu/spring-roll.jpg',
+        title: 'Spring Roll',
+        price: '$9.75',
     },
     {
         img: '/menu/noodles.jpg',
-        title: 'Noodles',
-        price: '$22.00',
+        title: 'Drunken Noodles',
+        price: '$17.50',
     },
     {
-        img: '/menu/mae-mu.jpg',
-        title: 'Some dishes',
-        price: '$24.00',
+        img: '/menu/fried-rice.jpg',
+        title: 'Thai Fried Rice',
+        price: '$18.95',
     },
     {
-        img: '/menu/henry-be.jpg',
-        title: 'Dessert',
-        price: '$14.00',
+        img: '/menu/rice.jpg',
+        title: 'Banh Mi',
+        price: '$12.50',
     },
 ];
 
@@ -42,7 +42,7 @@ const Menu = () => {
                     className='max-w-[570px] mx-auto text-center xl:text-right'>
                     <h2 className='mb-3'>Favorite Menu</h2>
                     <Link
-                        href='/'
+                        href='/all-menu'
                         className='text-primary flex justify-center xl:justify-end items-center mb-16'>
                         View all
                         <IoIosArrowRoundForward className='text-3xl' />
@@ -58,12 +58,12 @@ const Menu = () => {
                         return (
                             <div
                                 key={index}
-                                className='max-w-[270px] bg-white shadow-primary mx-auto xl:mx-0 group'>
+                                className='max-w-[370px] xl:max-w-[270px] bg-white shadow-primary mx-auto xl:mx-0 group'>
                                 <div className='overflow-hidden'>
                                     <Image
                                         src={item.img}
-                                        width={270}
-                                        height={270}
+                                        width={370}
+                                        height={370}
                                         alt='dish'
                                         className='group-hover:scale-110 transition-all duration-300'
                                     />

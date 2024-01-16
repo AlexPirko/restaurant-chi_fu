@@ -43,8 +43,12 @@ const Header = () => {
                         containerStyles='hidden xl:flex gap-x-12 text-white'
                         linkStyles='capitalize'
                     />
-                    <ScrollLink to='reservation' smooth={true}>
-                        <Button variant='secondary' size='sm'>
+                    <ScrollLink
+                        to='reservation'
+                        smooth={true}>
+                        <Button
+                            variant='secondary'
+                            size='sm'>
                             Book a table
                         </Button>
                     </ScrollLink>

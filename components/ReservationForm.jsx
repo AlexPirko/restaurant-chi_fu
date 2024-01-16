@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Calendar as CalendarIcon } from 'lucide-react';
 import { format } from 'date-fns';
-
+import toast from 'react-hot-toast';
 import { cn } from '@/lib/utils';
 import { Calendar } from '@/components/ui/calendar';
 import {
@@ -10,7 +10,6 @@ import {
     PopoverTrigger,
 } from '@/components/ui/popover';
 
-import Link from 'next/link';
 import { Button } from './ui/button';
 import { Label } from './ui/label';
 import { Input } from './ui/input';
@@ -24,22 +23,82 @@ import {
 } from '@/components/ui/select';
 
 const ReservationForm = () => {
-    const [date, setDate] = useState();
+    const [fullName, setFullName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [date, setDate] = useState('');
+    const [personQty, setPersonQty] = useState(0);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const creationPromise = new Promise(async (resolve, reject) => {
+            const response = await fetch('/api/orders', {
+                method: 'POST',
+                body: JSON.stringify({
+                    fullName,
+                    email,
+                    phone,
+                    date,
+                    personQty,
+                }),
+                headers: { 'Content-Type': 'application/json' },
+            });
+            if (response.ok) resolve();
+            else reject();
+        });
+        await toast.promise(
+            creationPromise,
+            {
+                success:
+                    'Your order has been received! Our manager will contact you shortly to confirm the details.',
+                error: 'Error, please, try again',
+            },
+            {
+                duration: 6000,
+            },
+        );
+        setFullName('');
+        setEmail('');
+        setPhone('');
+        setDate('');
+        setPersonQty('');
+    };
+
     return (
-        <form className='flex flex-col gap-y-10'>
+        <form
+            className='flex flex-col gap-y-10'
+            onSubmit={handleSubmit}>
             <div className='grid gap-7'>
-                <div className='grid grid-cols-1 xl:grid-cols-2 gap-[30px]'>
+                <div className='grid grid-cols-1 gap-[30px]'>
                     <div>
-                        <Label htmlFor='firstname'>first name</Label>
-                        <Input id='rirstname' type='text'></Input>
+                        <Label htmlFor='fullname'>full name</Label>
+                        <Input
+                            id='fullname'
+                            type='text'
+                            value={fullName}
+                            onChange={(e) =>
+                                setFullName(e.target.value)
+                            }></Input>
                     </div>
                     <div>
-                        <Label htmlFor='lastname'>last name</Label>
-                        <Input id='lastname' type='text'></Input>
+                        <Label htmlFor='phone'>phone number</Label>
+                        <Input
+                            id='phone'
+                            type='tel'
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}></Input>
+                    </div>
+                    <div>
+                        <Label htmlFor='email'>email</Label>
+                        <Input
+                            id='email'
+                            type='email'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}></Input>
                     </div>
                 </div>
 
-                <div className='grid grid-cols-1 xl:grid-cols-2 gap-[30px]'>
+                <div className='grid grid-cols-1 xl:grid-cols-2 mt-4'>
                     <Label>date</Label>
                     <Popover>
                         <PopoverTrigger asChild>
@@ -60,6 +119,7 @@ const ReservationForm = () => {
                             <Calendar
                                 mode='single'
                                 selected={date}
+                                value={date}
                                 onSelect={setDate}
                                 initialFocus
                             />
@@ -68,7 +128,9 @@ const ReservationForm = () => {
                 </div>
                 <div>
                     <Label>person</Label>
-                    <Select>
+                    <Select
+                        value={personQty}
+                        onValueChange={setPersonQty}>
                         <SelectTrigger className='w-full'>
                             <SelectValue placeholder='How many people?' />
                         </SelectTrigger>
@@ -79,6 +141,8 @@ const ReservationForm = () => {
                             <SelectItem value='4'>4</SelectItem>
                             <SelectItem value='5'>5</SelectItem>
                             <SelectItem value='6'>6</SelectItem>
+                            <SelectItem value='7'>7</SelectItem>
+                            <SelectItem value='8'>8</SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
