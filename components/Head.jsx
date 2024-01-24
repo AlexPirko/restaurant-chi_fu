@@ -38,16 +38,13 @@ const Head = () => {
                             initial='hidden'
                             whileInView={'show'}
                             viewport={{ once: false, amount: 0.4 }}
-                            className='text-white mb-12 max-w-lg mx-auto xl:max-w-none xl:mx-0'>
+                            className='text-white mb-12 max-w-lg mx-auto xl:max-w-none xl:mx-0 whitespace-pre-wrap'>
                             Our menu features an array of Asian delicacies,
                             emphasizing the use of fresh ingredients and vibrant
                             flavors. Explore our diverse selection of sushi,
-                            sashimi, and classic Asian dishes.
-                            <p className='text-white'>
-                                Experience the freshest catch of the day,
-                                carefully chosen from the market&apos;s finest
-                                selection of fish
-                            </p>
+                            sashimi, and classic Asian dishes. Experience the
+                            freshest catch of the day, carefully chosen from the
+                            market&apos;s finest selection of fish
                         </motion.p>
                         <motion.div
                             variants={fadeIn('down', 0.8)}

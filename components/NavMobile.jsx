@@ -12,6 +12,7 @@ import { BiSolidFoodMenu } from 'react-icons/bi';
 import { FaUsers, FaEnvelope } from 'react-icons/fa';
 
 import { Button } from './ui/button';
+import { LoginButton } from './auth/login-button';
 
 const links = [
     {
@@ -87,9 +88,22 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
                             );
                         })}
                     </div>
-                    <ScrollLink to='reservation' smooth offset={-150}>
-                        <Button variant='secondary'>Book a table</Button>
-                    </ScrollLink>
+                    <div>
+                        <ScrollLink
+                            className='md:hidden'
+                            to='reservation'
+                            smooth
+                            offset={-150}>
+                            <Button variant='secondary'>Book a table</Button>
+                        </ScrollLink>
+                        <LoginButton>
+                            <Link
+                                className='md:hidden ml-4 border-l-2 pl-4'
+                                href='/'>
+                                Log In
+                            </Link>
+                        </LoginButton>
+                    </div>
                 </div>
             </aside>
         </div>

@@ -26,9 +26,14 @@ module.exports = {
                 gray: '#888888',
                 outline: '#f1f1f1',
                 dark: { DEFAULT: '#273029', heavy: '#1b211c' },
-                primary: { DEFAULT: '#539592', hover: '#40807c' },
+                primary: {
+                    DEFAULT: '#539592',
+                    hover: '#40807c',
+                    dark: '#2d5453',
+                },
                 secondary: { DEFAULT: '#f09443', hover: '#da863c' },
-                red: '#ffa5a5',
+                red: '#f54c4c',
+                success: '#4cf582',
             },
             fontFamily: {
                 lora: ['var(--font-lora)', 'sana-serif'],

@@ -116,13 +116,13 @@ export default function MenuPage() {
     ];
 
     return (
-        <section className='max-w-7xl m-auto p-6'>
-            <div className='flex items-center justify-between'>
+        <section className='bg-head bg-no-repeat relative xl:bg-cover'>
+            <div className='flex items-center justify-between max-w-6xl m-auto'>
                 <Link href='/'>
                     <Image
                         className='mt-6'
                         src='/logo.png'
-                        width={80}
+                        width={90}
                         height={70}
                         alt='logo'
                     />
@@ -133,130 +133,131 @@ export default function MenuPage() {
                     <Link href='/#reservation'>Book a table</Link>
                 </Button>
             </div>
-            <h1 className='text-dark/90 uppercase !font-thin py-14 !text-5xl text-center before:content-["~"] after:content-["~"]'>
-                Menu
-            </h1>
-            <h2 className='text-dark/90 uppercase !text-2xl text-center p-2'>
-                APPETIZERS
-            </h2>
-            <div className='text-dark/30 border w-24 m-auto'></div>
-            <div className='max-w-4xl mx-auto grid md:grid-cols-2 gap-x-20 gap-y-12 p-6'>
-                {appetizers.map((item, index) => {
-                    return (
-                        <div
-                            key={index}
-                            className='flex flex-col justify-between gap-1'>
-                            <h3 className='font-poppins font-semibold text-center text-base text-dark mb-2'>
-                                {item.title}
-                            </h3>
-                            <p className='text-dark font-light text-sm mb-2'>
-                                {item.descr}
-                            </p>
-                            <p className='text-dark text-center'>
-                                {item.price}
-                            </p>
-                        </div>
-                    );
-                })}
+            <div className='bg-white/5'>
+                <h1 className='text-white/90 uppercase !font-thin py-14 !text-5xl text-center before:content-["~"] after:content-["~"]'>
+                    Menu
+                </h1>
+                <h2 className='text-white/90 uppercase !text-2xl text-center p-2'>
+                    APPETIZERS
+                </h2>
+                <div className='text-white/40 border w-24 m-auto'></div>
+                <div className='max-w-4xl mx-auto grid md:grid-cols-2 gap-x-20 gap-y-12 p-6'>
+                    {appetizers.map((item, index) => {
+                        return (
+                            <div
+                                key={index}
+                                className='flex flex-col justify-between gap-1'>
+                                <h3 className='font-poppins font-semibold text-center text-base text-white mb-2'>
+                                    {item.title}
+                                </h3>
+                                <p className='text-white font-light text-sm mb-2'>
+                                    {item.descr}
+                                </p>
+                                <p className='text-white text-center'>
+                                    {item.price}
+                                </p>
+                            </div>
+                        );
+                    })}
+                </div>
+                <h2 className='text-white/90 uppercase !text-2xl text-center p-2 mt-16'>
+                    SALAD & SOUP
+                </h2>
+                <div className='text-white/30 border w-24 m-auto'></div>
+                <div className='max-w-4xl mx-auto grid md:grid-cols-2 gap-x-20 gap-y-12 p-6'>
+                    {salad_soup.map((item, index) => {
+                        return (
+                            <div
+                                key={index}
+                                className='flex flex-col justify-between gap-1'>
+                                <h3 className='font-poppins font-semibold text-center text-base text-white mb-2'>
+                                    {item.title}
+                                </h3>
+                                <p className='text-white font-light text-sm mb-2'>
+                                    {item.descr}
+                                </p>
+                                <p className='text-white text-center'>
+                                    {item.price}
+                                </p>
+                            </div>
+                        );
+                    })}
+                </div>
+                <h2 className='text-white/90 uppercase !text-2xl text-center p-2 mt-16'>
+                    FRIED RICE & NOODLES
+                </h2>
+                <div className='text-white/30 border w-24 m-auto'></div>
+                <div className='max-w-4xl mx-auto grid md:grid-cols-2 gap-x-20 gap-y-12 p-6'>
+                    {rice_noodles.map((item, index) => {
+                        return (
+                            <div
+                                key={index}
+                                className='flex flex-col justify-between gap-1'>
+                                <h3 className='font-poppins font-semibold text-center text-base text-white'>
+                                    {item.title}
+                                </h3>
+                                <p className='text-white font-light text-sm'>
+                                    {item.descr}
+                                </p>
+                                <p className='text-white text-center'>
+                                    {item.price}
+                                </p>
+                            </div>
+                        );
+                    })}
+                </div>
+                <h2 className='text-white/90 uppercase !text-2xl text-center p-2 mt-16'>
+                    VEGETABLES
+                </h2>
+                <div className='text-white/30 border w-24 m-auto'></div>
+                <div className='max-w-4xl mx-auto grid md:grid-cols-2 gap-x-20 gap-y-12 p-6'>
+                    {vegetables.map((item, index) => {
+                        return (
+                            <div
+                                key={index}
+                                className='flex flex-col justify-between gap-1'>
+                                <h3 className='font-poppins font-semibold text-center text-base text-white'>
+                                    {item.title}
+                                </h3>
+                                <p className='text-white font-light text-sm'>
+                                    {item.descr}
+                                </p>
+                                <p className='text-white text-center'>
+                                    {item.price}
+                                </p>
+                            </div>
+                        );
+                    })}
+                </div>
+                <h2 className='text-white/90 uppercase !text-2xl text-center p-2 mt-16'>
+                    DESSERTS
+                </h2>
+                <div className='text-white/30 border w-24 m-auto'></div>
+                <div className='max-w-4xl mx-auto grid md:grid-cols-2 gap-x-20 gap-y-12 p-6'>
+                    {desserts.map((item, index) => {
+                        return (
+                            <div
+                                key={index}
+                                className='flex flex-col justify-between gap-1'>
+                                <h3 className='font-poppins font-semibold text-center text-base text-white'>
+                                    {item.title}
+                                </h3>
+                                <p className='text-white font-light text-sm'>
+                                    {item.descr}
+                                </p>
+                                <p className='text-white text-center'>
+                                    {item.price}
+                                </p>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
-            <h2 className='text-dark/90 uppercase !text-2xl text-center p-2 mt-16'>
-                SALAD & SOUP
-            </h2>
-            <div className='text-dark/30 border w-24 m-auto'></div>
-            <div className='max-w-4xl mx-auto grid md:grid-cols-2 gap-x-20 gap-y-12 p-6'>
-                {salad_soup.map((item, index) => {
-                    return (
-                        <div
-                            key={index}
-                            className='flex flex-col justify-between gap-1'>
-                            <h3 className='font-poppins font-semibold text-center text-base text-dark mb-2'>
-                                {item.title}
-                            </h3>
-                            <p className='text-dark font-light text-sm mb-2'>
-                                {item.descr}
-                            </p>
-                            <p className='text-dark text-center'>
-                                {item.price}
-                            </p>
-                        </div>
-                    );
-                })}
-            </div>
-            <h2 className='text-dark/90 uppercase !text-2xl text-center p-2 mt-16'>
-                FRIED RICE & NOODLES
-            </h2>
-            <div className='text-dark/30 border w-24 m-auto'></div>
-            <div className='max-w-4xl mx-auto grid md:grid-cols-2 gap-x-20 gap-y-12 p-6'>
-                {rice_noodles.map((item, index) => {
-                    return (
-                        <div
-                            key={index}
-                            className='flex flex-col justify-between gap-1'>
-                            <h3 className='font-poppins font-semibold text-center text-base text-dark'>
-                                {item.title}
-                            </h3>
-                            <p className='text-dark font-light text-sm'>
-                                {item.descr}
-                            </p>
-                            <p className='text-dark text-center'>
-                                {item.price}
-                            </p>
-                        </div>
-                    );
-                })}
-            </div>
-            <h2 className='text-dark/90 uppercase !text-2xl text-center p-2 mt-16'>
-                VEGETABLES
-            </h2>
-            <div className='text-dark/30 border w-24 m-auto'></div>
-            <div className='max-w-4xl mx-auto grid md:grid-cols-2 gap-x-20 gap-y-12 p-6'>
-                {vegetables.map((item, index) => {
-                    return (
-                        <div
-                            key={index}
-                            className='flex flex-col justify-between gap-1'>
-                            <h3 className='font-poppins font-semibold text-center text-base text-dark'>
-                                {item.title}
-                            </h3>
-                            <p className='text-dark font-light text-sm'>
-                                {item.descr}
-                            </p>
-                            <p className='text-dark text-center'>
-                                {item.price}
-                            </p>
-                        </div>
-                    );
-                })}
-            </div>
-            <h2 className='text-dark/90 uppercase !text-2xl text-center p-2 mt-16'>
-                DESSERTS
-            </h2>
-            <div className='text-dark/30 border w-24 m-auto'></div>
-            <div className='max-w-4xl mx-auto grid md:grid-cols-2 gap-x-20 gap-y-12 p-6'>
-                {desserts.map((item, index) => {
-                    return (
-                        <div
-                            key={index}
-                            className='flex flex-col justify-between gap-1'>
-                            <h3 className='font-poppins font-semibold text-center text-base text-dark'>
-                                {item.title}
-                            </h3>
-                            <p className='text-dark font-light text-sm'>
-                                {item.descr}
-                            </p>
-                            <p className='text-dark text-center'>
-                                {item.price}
-                            </p>
-                        </div>
-                    );
-                })}
-            </div>
-            <div className='mt-6 border-t border-dark/10'>
-                <p className='text-dark/70 text-center text-sm mt-4'>
+            <div>
+                <p className='text-white/70 text-center text-sm  py-8'>
                     Copyright &copy; ChiFu 2024
                 </p>
             </div>
-            
         </section>
     );
 }

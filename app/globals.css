@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
+:root {
+    height: 100%;
+}
+
 @layer base {
     * {
         @apply box-border;
@@ -36,7 +42,8 @@
     a {
         @apply text-white hover:text-secondary transition-all duration-300 cursor-pointer;
     }
+
     label {
-        @apply text-white text-sm uppercase font-normal block mb-2;
+        @apply text-white text-sm uppercase font-normal block;
     }
 }

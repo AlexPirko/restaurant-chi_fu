@@ -1,38 +1,40 @@
 'use client';
 
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import { useMediaQuery } from 'react-responsive';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
-const MapContainer = dynamic(
-    () => import('react-leaflet').then((module) => module.MapContainer),
-    {
-        ssr: true,
-    },
-);
-const TileLayer = dynamic(
-    () => import('react-leaflet').then((module) => module.TileLayer),
-    {
-        ssr: true,
-    },
-);
-const Marker = dynamic(
-    () => import('react-leaflet').then((module) => module.Marker),
-    {
-        ssr: true,
-    },
-);
-const Popup = dynamic(
-    () => import('react-leaflet').then((module) => module.Popup),
-    {
-        ssr: false,
-    },
-);
+// const MapContainer = dynamic(
+//     () => import('react-leaflet').then((module) => module.MapContainer),
+//     {
+//         ssr: false,
+//     },
+// );
+// const TileLayer = dynamic(
+//     () => import('react-leaflet').then((module) => module.TileLayer),
+//     {
+//         ssr: false,
+//     },
+// );
+// const Marker = dynamic(
+//     () => import('react-leaflet').then((module) => module.Marker),
+//     {
+//         ssr: false,
+//     },
+// );
+// const Popup = dynamic(
+//     () => import('react-leaflet').then((module) => module.Popup),
+//     {
+//         ssr: false,
+//     },
+// );
 import { Icon } from 'leaflet';
 
 import 'leaflet/dist/leaflet.css';
 
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/variants';
+import { useEffect } from 'react';
 
 const markers = [
     {
@@ -65,7 +67,7 @@ const Map = () => {
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: false, amount: 0.4 }}
-            className='relative xl:after:w-full xl:after:h-[240px] xl:after:bg-gradient-to-b xl:after:from-white xl:after:via-white/80 xl:after:to-white/20 xl:after:absolute xl:after:top-0 xl:after:z-20'
+            className='relative xl:after:w-full xl:after:h-[100px] xl:after:bg-gradient-to-b xl:after:from-white xl:after:via-white/80 xl:after:to-white/60 xl:after:absolute xl:after:top-0 xl:after:z-20'
             id='contact'>
             <MapContainer
                 center={[46.45, 30.73]}
