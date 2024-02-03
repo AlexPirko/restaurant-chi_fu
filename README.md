@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pizza deliver site
 
-## Getting Started
+### Homepage
+![screen-1](https://github.com/AlexPirko/restaurant-chi_fu/assets/105494280/a49ad2c1-d3ed-49fe-9c8a-ba8057d92d98)
 
-First, run the development server:
+### AdminPage
+![screen-2](https://github.com/AlexPirko/restaurant-chi_fu/assets/105494280/ad65211c-0f53-484b-a6d0-a18db202060c)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Deploy
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://restaurant-chi-fu.vercel.app/
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Description
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Asian cuisine restaurant website with an integrated table reservation form build with Next.js, React, Prisma ORM, authentication; with admin page with users and orders info.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Next.js for displaying UI components
+- TailwindCSS for styles
+- NextAuth.js for authentication
+- ORM Prisma provides the database service
