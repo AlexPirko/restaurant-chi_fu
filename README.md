@@ -1,4 +1,4 @@
-# Pizza deliver site
+# Restaurant website
 
 ### Homepage
 ![screen-1](https://github.com/AlexPirko/restaurant-chi_fu/assets/105494280/a49ad2c1-d3ed-49fe-9c8a-ba8057d92d98)
