@@ -11,7 +11,7 @@ const Footer = () => {
             variants={fadeIn('up', 0.2)}
             initial='hidden'
             whileInView={'show'}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
             className='bg-footer bg-cover bg-no-repeat text-white pt-16'>
             <div className='container mx-auto'>
                 <div className='flex flex-col justify-center sm:flex-row'>

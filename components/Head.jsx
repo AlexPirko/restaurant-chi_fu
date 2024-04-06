@@ -20,7 +20,7 @@ const Head = () => {
                             variants={fadeIn('down', 0.2)}
                             initial='hidden'
                             whileInView={'show'}
-                            viewport={{ once: false, amount: 0.4 }}
+                            viewport={{ once: true, amount: 0.4 }}
                             className='text-white mb-7'>
                             Chi Fu Asian Restaurant
                         </motion.h1>
@@ -28,29 +28,27 @@ const Head = () => {
                             variants={fadeIn('down', 0.4)}
                             initial='hidden'
                             whileInView={'show'}
-                            viewport={{ once: false, amount: 0.4 }}
+                            viewport={{ once: true, amount: 0.4 }}
                             className='text-white font-semibold mb-7'>
-                            by:{' '}
-                            <span className='text-secondary'>Alex I. Joo</span>
+                            by: <span className='text-secondary'>Alex I. Joo</span>
                         </motion.p>
                         <motion.p
                             variants={fadeIn('down', 0.6)}
                             initial='hidden'
                             whileInView={'show'}
-                            viewport={{ once: false, amount: 0.4 }}
+                            viewport={{ once: true, amount: 0.4 }}
                             className='text-white mb-12 max-w-lg mx-auto xl:max-w-none xl:mx-0 whitespace-pre-wrap'>
-                            Our menu features an array of Asian delicacies,
-                            emphasizing the use of fresh ingredients and vibrant
-                            flavors. Explore our diverse selection of sushi,
-                            sashimi, and classic Asian dishes. Experience the
-                            freshest catch of the day, carefully chosen from the
-                            market&apos;s finest selection of fish
+                            Our menu features an array of Asian delicacies, emphasizing the use of
+                            fresh ingredients and vibrant flavors. Explore our diverse selection of
+                            sushi, sashimi, and classic Asian dishes. Experience the freshest catch
+                            of the day, carefully chosen from the market&apos;s finest selection of
+                            fish
                         </motion.p>
                         <motion.div
                             variants={fadeIn('down', 0.8)}
                             initial='hidden'
                             whileInView={'show'}
-                            viewport={{ once: false, amount: 0.4 }}>
+                            viewport={{ once: true, amount: 0.4 }}>
                             <ScrollLink
                                 to='reservation'
                                 smooth={true}>
@@ -62,7 +60,7 @@ const Head = () => {
                         variants={fadeIn('up', 0.8)}
                         initial='hidden'
                         whileInView={'show'}
-                        viewport={{ once: false, amount: 0.1 }}
+                        viewport={{ once: true, amount: 0.1 }}
                         className='hidden xl:flex xl:absolute xl:top-[200px] xl:right-0'>
                         <Image
                             src='/head/plate.png'
@@ -77,7 +75,7 @@ const Head = () => {
                 variants={fadeIn('up', 1.2)}
                 initial='hidden'
                 whileInView={'show'}
-                viewport={{ once: false, amount: 0.1 }}
+                viewport={{ once: true, amount: 0.1 }}
                 className='hidden xl:flex xl:relative xl:-top-36'>
                 <Image
                     src='/head/coffee.png'

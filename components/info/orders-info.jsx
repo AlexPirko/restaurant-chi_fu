@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { format } from 'date-fns';
-import {PulseLoader} from 'react-spinners'
+import { PulseLoader } from 'react-spinners';
 
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { getOrders } from '@/data/orders';
@@ -26,7 +26,7 @@ export const OrdersInfo = ({ label }) => {
                 <p className='text-2xl font-semibold text-center'>{label}</p>
             </CardHeader>
             <CardContent className='space-y-4'>
-                {loadingOrders && <PulseLoader className='text-center'/>}
+                {loadingOrders && <PulseLoader className='text-center' />}
                 {orders?.length > 0 &&
                     orders.map((order, index) => (
                         <div

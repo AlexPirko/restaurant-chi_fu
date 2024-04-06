@@ -15,28 +15,26 @@ const About = () => {
                 variants={fadeIn('right', 0.2)}
                 initial='hidden'
                 whileInView={'show'}
-                viewport={{ once: false, amount: 0.4 }}
+                viewport={{ once: true, amount: 0.4 }}
                 className='xl:pl-[135px]'>
                 <h1 className='mb-9'>About Us</h1>
                 <p className='mb-8'>
-                    Restaurant where history intertwines with style. Eastern
-                    culture becomes more accessible through flavors expertly
-                    interpreted by the Chef. Traditional Asian cuisine is
-                    complemented by their unique vision, reflected in the
+                    Restaurant where history intertwines with style. Eastern culture becomes more
+                    accessible through flavors expertly interpreted by the Chef. Traditional Asian
+                    cuisine is complemented by their unique vision, reflected in the
                     establishment&#39;s menu.
                 </p>
                 <p>
-                    At ChiFu Restaurant all dishes are prepared in an open
-                    kitchen equipped with a robata grill. Restaurant guests find
-                    themselves face to face with the Chef, able to observe the
-                    cooking process firsthand.
+                    At ChiFu Restaurant all dishes are prepared in an open kitchen equipped with a
+                    robata grill. Restaurant guests find themselves face to face with the Chef, able
+                    to observe the cooking process firsthand.
                 </p>
             </motion.div>
             <motion.div
                 variants={fadeIn('left', 0.4)}
                 initial='hidden'
                 whileInView={'show'}
-                viewport={{ once: false, amount: 0.4 }}>
+                viewport={{ once: true, amount: 0.4 }}>
                 <Image
                     src='/about/img.png'
                     width={705}

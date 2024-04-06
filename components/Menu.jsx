@@ -32,13 +32,15 @@ const menu = [
 
 const Menu = () => {
     return (
-        <section className='relative py-12 xl:py-24 bg-menu' id='menu'>
+        <section
+            className='relative py-12 xl:py-24 bg-menu'
+            id='menu'>
             <div className='container mx-auto'>
                 <motion.div
                     variants={fadeIn('left', 0.3)}
                     initial='hidden'
                     whileInView={'show'}
-                    viewport={{ once: false, amount: 0.2 }}
+                    viewport={{ once: true, amount: 0.2 }}
                     className='max-w-[570px] mx-auto text-center xl:text-right'>
                     <h2 className='mb-3'>Favorite Menu</h2>
                     <Link
@@ -52,7 +54,7 @@ const Menu = () => {
                     variants={fadeIn('up', 0.4)}
                     initial='hidden'
                     whileInView={'show'}
-                    viewport={{ once: false, amount: 0.2 }}
+                    viewport={{ once: true, amount: 0.2 }}
                     className='grid grid-cols-1 gap-7 md:grid-cols-2 md:gap-4 xl:grid-cols-4'>
                     {menu.map((item, index) => {
                         return (
